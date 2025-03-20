@@ -41,6 +41,8 @@ public class GreetingController {
         model.addAttribute("names", greetingService.getNames());
         return "greeting";
     }
+
+
 }
 
 @Service
@@ -64,5 +66,10 @@ class GreetingApiController {
     @GetMapping("/api/names")
     public List<String> getNames() {
         return greetingService.getNames();
+    }
+
+    @GetMapping("/api/random")
+    public Quote getRandomQuote() {
+        return new Quote("success", new Value(1L, "Esta es una cita de prueba"));
     }
 }
