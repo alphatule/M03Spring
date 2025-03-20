@@ -1,0 +1,12 @@
+app:
+  message: "Bienvenido a la página de saludos"
+
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5

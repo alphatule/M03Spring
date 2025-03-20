@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greeting</title>
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+
+<form action="/greeting" method="post">
+    <input type="text" name="name" placeholder="Ingrese su nombre" required>
+    <button type="submit">Enviar</button>
+</form>
+
+<h2>Nombres ingresados:</h2>
+<ul>
+    <li th:each="name : ${names}" th:text="${name}"></li>
+</ul>
+
+<a href="/">Volver al inicio</a>
+</body>
+</html>
